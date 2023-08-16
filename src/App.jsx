@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { createRoot } from 'react-dom/client'
-import { Canvas } from '@react-three/fiber'
+import { createRoot } from 'react-dom/client';
+import { Canvas } from '@react-three/fiber';
 
 import Box from './components/Box';
 import './App.css';
