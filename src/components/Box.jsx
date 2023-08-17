@@ -1,16 +1,17 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 
 function Box() {
   const myMesh = useRef();
+  const [isRotate, setRotate] = useState(true);
 
   useFrame(({ clock }) => {
     const a = clock.getElapsedTime();
-    myMesh.current.rotation.y = a;
+    if(isRotate) myMesh.current.rotation.y = a;
   });
 
   return (
-    <mesh onClick={() => alert('It a box')} ref={myMesh}>
+    <mesh onClick={() => setRotate(!isRotate)} ref={myMesh}>
       <boxGeometry args={[2, 2, 2]} />
       <meshStandardMaterial />
     </mesh>
