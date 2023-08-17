@@ -10,7 +10,7 @@ function Box() {
   });
 
   return (
-    <mesh ref={myMesh}>
+    <mesh onClick={() => alert('It a box')} ref={myMesh}>
       <boxGeometry args={[2, 2, 2]} />
       <meshStandardMaterial />
     </mesh>
