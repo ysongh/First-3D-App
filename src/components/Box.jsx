@@ -11,7 +11,7 @@ function Box() {
   });
 
   return (
-    <mesh onClick={() => setRotate(!isRotate)} ref={myMesh}>
+    <mesh onClick={() => setRotate(!isRotate)} ref={myMesh} scale={2}>
       <boxGeometry args={[2, 2, 2]} />
       <meshStandardMaterial color="yellow" />
     </mesh>
