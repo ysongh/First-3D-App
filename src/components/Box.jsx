@@ -19,7 +19,7 @@ function Box() {
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}>
       <boxGeometry args={[2, 2, 2]} />
-      <meshStandardMaterial color="yellow" />
+      <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
   )
 }
