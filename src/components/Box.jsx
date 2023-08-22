@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 
-function Box() {
+function Box(props) {
   const myMesh = useRef();
   const [isRotate, setRotate] = useState(true);
   const [hovered, setHover] = useState(false)
@@ -13,6 +13,7 @@ function Box() {
 
   return (
     <mesh
+      {...props}
       onClick={() => setRotate(!isRotate)}
       ref={myMesh}
       scale={hovered ? 1.5 : 1}
