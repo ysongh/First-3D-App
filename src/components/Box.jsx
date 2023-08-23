@@ -16,7 +16,7 @@ function Box(props) {
       {...props}
       onClick={() => setRotate(!isRotate)}
       ref={myMesh}
-      scale={hovered ? 1.5 : 1}
+      scale={hovered ? 1 : .8}
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}>
       <boxGeometry args={[2, 2, 2]} />
