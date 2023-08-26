@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import Box from './components/Box';
 import MoveBox from './components/MoveBox';
 import Sphere from './components/Sphere';
+import Floor from './components/Floor';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Box position={[1, 1.5, 0]} />
         <Sphere position={[2, -1, 0]}  />
         <MoveBox />
+        <Floor />
       </Canvas>
     </div>
   )
