@@ -13,14 +13,14 @@ function App() {
   return (
     <div id="canvas-container">
       <Canvas>
-        <PerspectiveCamera makeDefault position={[0, -0.5, 10]}/>
+        <PerspectiveCamera makeDefault position={[0, -1, 10]}/>
         <ambientLight intensity={0.1} />
         <directionalLight color="white" position={[0, 0, 5]} />
         <Box position={[-1.2, -1, 0]} />
         <Box position={[1, 1.5, 0]} />
-        <Sphere position={[2, -1, 0]}  />
+        <Sphere position={[2, -1, 0]} />
         <MoveBox />
-        <Floor />
+        <Floor position={[0, -.8, 0]}/>
       </Canvas>
     </div>
   )

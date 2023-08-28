@@ -1,9 +1,9 @@
 
 const angleFormat = (deg) => (Math.PI / 180) * deg;
 
-function Floor() {
+function Floor(props) {
   return (
-    <mesh rotation={[(angleFormat(90)), 0, 0]} >
+    <mesh {...props} rotation={[(angleFormat(90)), 0, 0]} >
       <planeGeometry args={[7, 7]} />
       <meshStandardMaterial color="pink" />
     </mesh>
