@@ -31,7 +31,7 @@ function Main() {
   return (
     <>
       <PerspectiveCamera makeDefault position={[0, -1, 8]}/>
-      <OrbitControls ref={orbitControlsRef} />
+      <OrbitControls ref={orbitControlsRef} minPolarAngle={angleFormat(60)} maxPolarAngle={angleFormat(90)} />
       <ambientLight intensity={0.1} />
       <directionalLight color="white" position={[0, 0, 5]} />
       <Box position={[-2.5, 1, 0]} />
