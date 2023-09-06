@@ -32,12 +32,15 @@ function Main() {
     <>
       <PerspectiveCamera makeDefault position={[0, -1, 8]}/>
       <OrbitControls ref={orbitControlsRef} minPolarAngle={angleFormat(60)} maxPolarAngle={angleFormat(90)} />
-      <ambientLight intensity={0.1} />
+      
       <directionalLight color="white" position={[0, 0, 5]} />
       <Box position={[-2.5, 1, 0]} />
       <Sphere position={[2, -1, 0]} />
       <MoveBox />
       <Floor position={[0, -.8, 0]}/>
+
+      <ambientLight intensity={0.1} />
+      <directionalLight args={["#ffffff", 1]} position={[-4, 1, 0]} />
     </>
   )
 }
