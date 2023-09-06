@@ -35,11 +35,11 @@ function Main() {
       
       <directionalLight color="white" position={[0, 0, 5]} />
       <Box position={[-2.5, 1, 0]} />
-      <Sphere position={[2, -1, 0]} />
+      <Sphere position={[0, -1, 0]} />
       <MoveBox />
-      <Floor position={[0, -.8, 0]}/>
+      <Floor position={[0, 1, 0]}/>
 
-      <ambientLight intensity={0.1} />
+      <ambientLight args={["#ffffff", .5]} />
       <directionalLight args={["#ffffff", 1]} position={[-4, 1, 0]} />
     </>
   )
