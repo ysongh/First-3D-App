@@ -30,7 +30,7 @@ function Main() {
 
   return (
     <>
-      <PerspectiveCamera makeDefault position={[0, -1, 8]}/>
+      <PerspectiveCamera makeDefault position={[10, -5, 8]}/>
       <OrbitControls ref={orbitControlsRef} minPolarAngle={angleFormat(60)} maxPolarAngle={angleFormat(90)} />
       
       <directionalLight color="white" position={[0, 0, 5]} />
@@ -40,7 +40,7 @@ function Main() {
       <Floor position={[0, 1, 0]}/>
 
       <ambientLight args={["#ffffff", .5]} />
-      <directionalLight args={["#ffffff", 1]} position={[-4, 1, 0]} />
+      <spotLight args={["#ffffff", 1]} position={[-4, 1, 0]} />
     </>
   )
 }
