@@ -40,7 +40,7 @@ function Main() {
       <Floor position={[0, -1, 0]}/>
 
       <ambientLight args={["#ffffff", .25]} />
-      <spotLight args={["#ffffff", 10, 7, angleFormat(45), 0.4]} position={[-4, 1, 0]} />
+      <spotLight args={["#ffffff", 10, 7, angleFormat(45), 0.4]} position={[-3, 1, 0]} castShadow />
     </>
   )
 }

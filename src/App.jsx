@@ -7,7 +7,7 @@ import Main from './components/Main';
 function App() {
   return (
     <div id="canvas-container">
-      <Canvas>
+      <Canvas shadows>
         <Main />
       </Canvas>
     </div>
