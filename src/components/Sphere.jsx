@@ -14,6 +14,7 @@ function Sphere(props) {
       ref={myMesh}
       position={position}
       onClick={handleMove}
+      castShadow
     >
       <sphereGeometry args={[1, 32, 32]} />
       <meshStandardMaterial color="yellow" />
