@@ -6,11 +6,9 @@ import Main from './components/Main';
 
 function App() {
   return (
-    <div id="canvas-container">
-      <Canvas shadows>
-        <Main />
-      </Canvas>
-    </div>
+    <Canvas id="canvas-container" shadows>
+      <Main />
+    </Canvas>
   )
 }
 
