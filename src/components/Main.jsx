@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import { Environment, OrbitControls, PerspectiveCamera } from '@react-three/drei';
+import * as THREE from "three";
 
 import Box from './Box';
 import MoveBox from './MoveBox';
@@ -41,6 +42,13 @@ function Main() {
 
       <ambientLight args={["#ffffff", .25]} />
       <spotLight args={["#ffffff", 10, 7, angleFormat(45), 0.4]} position={[-3, 1, 0]} castShadow />
+
+      <Environment background>
+        <mesh>
+          <sphereGeometry args={[50, 100, 100]} />
+          <meshBasicMaterial side={THREE.BackSide} color="#2376ad"/>
+        </mesh>       
+      </Environment>
     </>
   )
 }
