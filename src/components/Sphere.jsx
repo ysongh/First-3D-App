@@ -9,7 +9,7 @@ function Sphere(props) {
     if (!!myMesh.current) {
       gsap.to(myMesh.current.position, {
         duration: 5,
-        x: 3
+        y: 3
       })
     }
   }, [myMesh.current])
