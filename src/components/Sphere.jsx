@@ -1,8 +1,19 @@
-import { useRef, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import gsap from "gsap";
 
 function Sphere(props) {
-  const myMesh = useRef();
+  const myMesh = useRef(null);
   const [position, setPosition] = useState([0, 0, 0]);
+
+  useEffect(() => {
+    if (!!myMesh.current) {
+      gsap.to(myMesh.current.position, {
+        duration: 5,
+        x: 3
+      })
+    }
+  }, [myMesh.current])
+  
 
   const handleMove = () => {
     setPosition(prevPosition => [prevPosition[0], prevPosition[1] - 0.1, prevPosition[2]]);
