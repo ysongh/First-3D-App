@@ -8,8 +8,9 @@ function Sphere(props) {
   useEffect(() => {
     if (!!myMesh.current) {
       gsap.to(myMesh.current.position, {
-        duration: 5,
-        y: 3
+        duration: 2,
+        x: 3,
+        ease: "power2.out"
       })
     }
   }, [myMesh.current])
