@@ -7,15 +7,21 @@ function Sphere(props) {
 
   useEffect(() => {
     if (!!myMesh.current) {
-      gsap.to(myMesh.current.position, {
-        duration: 5,
+      const timeline = gsap.timeline({ paused: true });
+
+      timeline.to(myMesh.current.position, {
+        duration: 3,
         x: 3,
         ease: "power2.out"
       });
 
-      gsap.from(myMesh.current.position, {
-        x: -5
-      });
+      timeline.to(myMesh.current.position, {
+        duration: 1,
+        y: 2,
+        ease: "power2.in"
+      }, ">+=2");
+
+      timeline.play();
     }
   }, [myMesh.current])
   
