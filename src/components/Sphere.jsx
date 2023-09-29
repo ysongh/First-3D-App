@@ -9,16 +9,16 @@ function Sphere(props) {
       const timeline = gsap.timeline({ paused: true });
 
       timeline.to(myMesh.current.position, {
-        duration: 3,
-        x: 3,
+        duration: 2,
+        x: 1,
         ease: "power2.out"
       });
 
       timeline.to(myMesh.current.position, {
-        duration: 1,
-        y: 2,
-        ease: "power2.in"
-      }, ">+=2");
+        duration: 1.5,
+        y: 0.5,
+        ease: "bounce.out"
+      }, "<");
 
       timeline.play();
     }

@@ -36,7 +36,7 @@ function Main() {
       
       <directionalLight color="white" position={[0, 0, 5]} />
       <Box position={[4, 1, 0]} />
-      <Sphere position={[0, 0, 0]} />
+      <Sphere position={[-3, 3, 0]} />
       {/* <MoveBox /> */}
       <Floor position={[0, -1, 0]}/>
 
