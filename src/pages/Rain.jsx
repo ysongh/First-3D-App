@@ -5,7 +5,13 @@ import { Box } from '@react-three/drei';
 const RainDrop = ({ position }) => {
   const ref = useRef();
 
-  useFrame(() => {
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+
+    // Update the y-position to simulate falling
+    ref.current.position.y = Math.sin(t) * 2;
+
+    // Apply rotation
     ref.current.rotation.x += 0.01;
     ref.current.rotation.y += 0.01;
   });
@@ -18,18 +24,12 @@ const RainDrop = ({ position }) => {
 };
 
 const Rain = () => {
-  const rainDrops = useMemo(() => {
-    const drops = [];
-    for (let i = 0; i < 100; i++) {
-      drops.push(
-        <RainDrop
-          key={i}
-          position={[Math.random() * 10 - 5, Math.random() * 5, Math.random() * 10 - 5]}
-        />
-      );
-    }
-    return drops;
-  }, []);
+  const rainDrops = Array.from({ length: 100 }, (_, index) => (
+    <RainDrop
+      key={index}
+      position={[Math.random() * 10 - 5, Math.random() * 5, Math.random() * 10 - 5]}
+    />
+  ));
 
   return (
     <Canvas id="canvas-container">
